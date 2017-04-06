@@ -58,7 +58,7 @@ namespace Matching_Game_Task.Presenter
 
         //Creating a new random game deck: 
 
-        private void CreateADeck(int cardTypes_Amount)
+        private void CreateDeck(int cardTypes_Amount)
         {
             Deck.Clear();
             for (int i = 0; i < cardTypes_Amount; i++)
@@ -72,7 +72,7 @@ namespace Matching_Game_Task.Presenter
 
         // Starting a game based on chosen table size and card pack:
 
-        public void StartAGame(string tableSize, string cardPack)
+        public void StartGame(string tableSize, string cardPack)
         {
             this.tableSize = tableSize;
             _gameView = new GameView();
@@ -92,11 +92,9 @@ namespace Matching_Game_Task.Presenter
                 case "5x6":
                     cardTypes_Amount = 15;
                     break;
-
-
             }
             GetAllImages(cardPack);
-            CreateADeck(cardTypes_Amount);
+            CreateDeck(cardTypes_Amount);
             _gameView.PrepareGameTable(tableSize, cardTypes_Amount);
             _menuView.Hide();
             _gameView.Show();

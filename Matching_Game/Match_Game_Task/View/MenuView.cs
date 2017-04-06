@@ -31,11 +31,11 @@ namespace Matching_Game_Task.View
             label_lastHighscore.Text = new_highscore;
         }
 
-        //Event Handler for "Start" button click event. Starts the game, calling main game logic's "StartAGame" method:
+        //Event Handler for "Start" button click event. Starts the game, calling main game logic's "StartGame" method:
 
         private void button_Start_Click(object sender, EventArgs e)
         {
-            gameLogic.StartAGame(tableSize, cardPack);
+            gameLogic.StartGame(tableSize, cardPack);
         }
 
         //Next two methods are used to change clicked button's color, setting current game mode(depending on a game table size)

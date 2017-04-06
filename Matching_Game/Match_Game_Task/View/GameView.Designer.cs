@@ -50,7 +50,6 @@
             this.tableLayoutPanel_gameTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel_gameTable.Size = new System.Drawing.Size(380, 390);
             this.tableLayoutPanel_gameTable.TabIndex = 0;
-            this.tableLayoutPanel_gameTable.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel_gameTable_Paint);
             // 
             // label_sc_lbl
             // 

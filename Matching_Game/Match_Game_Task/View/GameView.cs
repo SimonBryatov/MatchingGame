@@ -24,11 +24,6 @@ namespace Matching_Game_Task.View
             Application.Exit();
         }
 
-        private void tableLayoutPanel_gameTable_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //Setting TableLayoutPanel for cards' picturebox elements:
 
         private void SetLayoutPanel(int rows, int columns)
@@ -38,8 +33,9 @@ namespace Matching_Game_Task.View
             tableLayoutPanel_gameTable.RowStyles.Clear();
             tableLayoutPanel_gameTable.ColumnStyles.Clear();
             tableLayoutPanel_gameTable.RowCount = 0;
-            tableLayoutPanel_gameTable.ColumnCount = 0;       
-            for (int i = 0; i < rows; i++) {
+            tableLayoutPanel_gameTable.ColumnCount = 0;
+            for (int i = 0; i < rows; i++)
+            {
                 tableLayoutPanel_gameTable.RowCount++;
                 RowStyle r_style = new RowStyle(SizeType.AutoSize);
                 tableLayoutPanel_gameTable.RowStyles.Add(r_style);
@@ -57,7 +53,7 @@ namespace Matching_Game_Task.View
         private void Add_Cards(int cardTypes_Amount)
         {
             Cards.Clear();
-            for (int i = 0; i < cardTypes_Amount*2; i++ )
+            for (int i = 0; i < cardTypes_Amount * 2; i++)
             {
                 Cards.Add(new PictureBox());
                 Cards[i].Height = 105;
@@ -68,8 +64,6 @@ namespace Matching_Game_Task.View
                 Cards[i].Click += new EventHandler(Card_Click);
                 Cards[i].MouseEnter += new EventHandler(Card_MouseEnter);
                 Cards[i].MouseLeave += new EventHandler(Card_MouseLeave);
-
-
             }
         }
 
@@ -79,7 +73,7 @@ namespace Matching_Game_Task.View
         {
             PictureBox card = sender as PictureBox;
             gameLogic.on_Card_Click(Cards.IndexOf(card));
-            
+
         }
 
         //Card's picturebox MouseEnter handler:
@@ -156,6 +150,5 @@ namespace Matching_Game_Task.View
             Add_Cards(cardTypes_Amount);
         }
     }
-
-    }
+}
 
